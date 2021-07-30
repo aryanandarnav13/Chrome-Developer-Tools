@@ -3,140 +3,146 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-* {box-sizing: border-box}
-body {font-family: "Lato", sans-serif;}
-
-/* Style the tab */
-.tab {
-  float: left;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-  width: 30%;
-  height: 300px;
+* {
+  box-sizing: border-box;
 }
 
-/* Style the buttons inside the tab */
-.tab button {
-  display: block;
-  background-color: inherit;
-  color: black;
-  padding: 22px 16px;
-  width: 100%;
-  border: none;
-  outline: none;
-  text-align: left;
-  cursor: pointer;
-  transition: 0.3s;
-  font-size: 17px;
+
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
 }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
+
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
 }
 
-/* Create an active/current "tab button" class */
-.tab button.active {
-  background-color: #ccc;
+
+
+
+
+
+
+
+
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
 }
 
-/* Style the tab content */
-.tabcontent {
-  float: left;
-  padding: 0px 12px;
-  border: 1px solid #ccc;
-  width: 70%;
-  border-left: none;
-  height: 300px;
+.container {
+      /* text-align: center; */
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+  }
+  
+
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
 }
 </style>
 </head>
 <body>
 
-<h2>Chrome Developer Tools</h2>
-<p>Chrome Developer Tools is a comprehensive toolkit for developers, built directly into the Chrome browser. These tools let you edit web pages in real time, diagnose problems more quickly, and build better websites faster.</p>
-<p>Clicking on the Inspect option from the right-click menu will directly open the Developer tools including the editor, Console, Sources, and other tools. Refer to the image below for a better understanding.</p>
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Elements')" id="defaultOpen">Elements</button>
-  <button class="tablinks" onclick="openCity(event, 'Console')">Console</button>
-  <button class="tablinks" onclick="openCity(event, 'Sources')">Sources</button>
-  <button class="tablinks" onclick="openCity(event, 'Network')">Network</button>
-  <button class="tablinks" onclick="openCity(event, 'Performance')">Performance</button>
-  <button class="tablinks" onclick="openCity(event, 'Memory')">Memory</button>
-  <button class="tablinks" onclick="openCity(event, 'Application')">Application</button>
-  <button class="tablinks" onclick="openCity(event, 'Security')">Security</button>
-  <button class="tablinks" onclick="openCity(event, 'Lighthouse')">Lighthouse</button>
+<div class="header">
+  <h2>What are Chrome Developer Tools?</h2>
 </div>
 
-<div id="Elements" class="tabcontent">
-    <img style="height: 20rem; margin-top: 1rem;justify-content: center;" src="element.png" alt="">
-  <h3>Elements</h3>
-  <p>The Elements panel shows an HTML tree, listing all DOM elements. On the right, the sidebar shows properties related to the presently selected element. By default, the CSS style rules are listed. There is also a box-model for the element selected, event listeners attached to it, etc.</p>
-  
+<div class="row container">
+  <div>
+    <div class="card">
+      <h2></h2>
+      <h5>Blog , July 31, 2021</h5>
+     
+      <h2>Chrome Developer Tools</h2>
+<hr>
+      <div >
+        <img style="height: 20rem; width: 100%; margin-top: 1rem;justify-content: center;" src="element.png" alt="">
+      <h3>Elements</h3>
+      <p>The Elements panel shows an HTML tree, listing all DOM elements. On the right, the sidebar shows properties related to the presently selected element. By default, the CSS style rules are listed. There is also a box-model for the element selected, event listeners attached to it, etc.</p>
+      
+    </div>
+    <hr>
+    <div>
+        <img style="height: 20rem; width: 100%; margin-top: 1rem;justify-content: center;" src="console.jpeg" alt="">
+      <h3>Console</h3>
+      <p>Console deals with JavaScript. It gives you information about interactive elements on a page. In Console, you can write JavaScript to interact with the web page you’re viewing, and it also lets you write messages to yourself in the JavaScript of websites you’re building, which then show up in Console to show that the JS was executed.</p> 
+    </div>
+    <hr>
+    <div >
+        <img style="height: 20rem; width: 100%; margin-top: 1rem;justify-content: center;" src="source.jpeg" alt="">
+      <h3>Sources</h3>
+      <p>This is probably the most powerful place in the developer tools. The sidebar shows the directory listing of all the static resources loaded for the webpage presently open. Clicking on any one will open that resource in the File Area.</p>
+      <p>The sidebar on the right is for JavaScript inspection. By clicking on a line number,  a breakpoint can be added for that line of the script open in the file area. When that line is about to be executed, script execution will be paused.</p>
+      <p>To inspect a variable defined in the function. We can’t do that directly, since it is not available in the global scope, but we can do this by adding a break-point at the function declaration. When the function is about to be executed, the debugger will be invoked, and we step through the lines one by one, by clicking the “Step over next function call” button.</p>
+    </div>
+    <hr>
+    <div>
+        <img style="height: 20rem; width: 100%; margin-top: 1rem;justify-content: center;" src="network.jpeg" alt="">
+        <h3>Network</h3>
+        <p>This tab monitors all incoming and outgoing HTTP requests from the web-page. If  webpage uses AJAX, we can track the AJAX requests as well from here. Clicking on any request shows further details about it.</p>
+      </div>
+      <hr>
+      <div >
+       
+        <img style="height: 20rem; width: 100%; margin-top: 1rem;justify-content: center;" src="performance.jpeg" alt="">
+        <h3>Performance</h3>
+        <p>The  Performance tab is packed full of features that let audit page performance in depth. Recording a performance profile. Overview of the the Performance tab. CPU utilization timeline.</p>
+      </div>
+      <hr>
+      <div >
+        <img style="height: 20rem; width: 100%; margin-top: 1rem;justify-content: center;" src="memory.jpeg" alt="">
+        <h3>Memory</h3>
+        <p>It provides information about how a page is using memory</p>
+      </div>
+      <hr>
+      <div >
+        <img style="height: 20rem; width: 100%; margin-top: 1rem;justify-content: center;" src="application.jpeg" alt="">
+        <h3>Application</h3>
+        <p>Application shows what’s in browser storage: in-browser databases like Web SQL, local storage, and more. It also gives granular control over cookies.</p>
+      </div>
+      <hr>
+      <div >
+        <img style="height: 20rem; width: 100%; margin-top: 1rem;justify-content: center;" src="security.jpeg" alt="">
+        <h3>Security</h3>
+        <p>Security gives basic security information, letting view a site’s HTTPS certificate and TLS status.</p>
+      </div>
+      <hr>
+      <div >
+        <img style="height: 20rem; width: 100%; margin-top: 1rem;justify-content: center;" src="lighthouse.jpeg" alt="">
+        <h3>Lighthouse</h3>
+        <p>Lighthouse is an automated tool for improving the quality of the site. It provides a list of recommendations on how to improve page performance, make pages more accessible, adhere to best practices and more.</p>
+      </div>
+    
+
+
+</div>
+  </div>
 </div>
 
-<div id="Console" class="tabcontent">
-    <img style="height: 20rem; margin-top: 1rem;justify-content: center;" src="console.jpeg" alt="">
-  <h3>Console</h3>
-  <p>Console deals with JavaScript. It gives you information about interactive elements on a page. In Console, you can write JavaScript to interact with the web page you’re viewing, and it also lets you write messages to yourself in the JavaScript of websites you’re building, which then show up in Console to show that the JS was executed.</p> 
+<div class="footer">
+  <h2>Aryanand Arnav</h2>
 </div>
 
-<div id="Sources" class="tabcontent">
-    <img style="height: 20rem; margin-top: 1rem;justify-content: center;" src="source.jpeg" alt="">
-  <h3>Sources</h3>
-  <p>This is probably the most powerful place in the developer tools. The sidebar shows the directory listing of all the static resources loaded for the webpage presently open. Clicking on any one will open that resource in the File Area.</p>
-  <p>The sidebar on the right is for JavaScript inspection. By clicking on a line number,  a breakpoint can be added for that line of the script open in the file area. When that line is about to be executed, script execution will be paused.</p>
-  <p>To inspect a variable defined in the function. We can’t do that directly, since it is not available in the global scope, but we can do this by adding a break-point at the function declaration. When the function is about to be executed, the debugger will be invoked, and we step through the lines one by one, by clicking the “Step over next function call” button.</p>
-</div>
-<div id="Network" class="tabcontent">
-    <img style="height: 20rem; margin-top: 1rem;justify-content: center;" src="network.jpeg" alt="">
-    <h3>Network</h3>
-    <p>This tab monitors all incoming and outgoing HTTP requests from the web-page. If  webpage uses AJAX, we can track the AJAX requests as well from here. Clicking on any request shows further details about it.</p>
-  </div>
-  <div id="Performance" class="tabcontent">
-    <img style="height: 20rem; margin-top: 1rem;justify-content: center;" src="performance.jpeg" alt="">
-    <h3>Performance</h3>
-    <p>The  Performance tab is packed full of features that let audit page performance in depth. Recording a performance profile. Overview of the the Performance tab. CPU utilization timeline.</p>
-  </div>
-  <div id="Memory" class="tabcontent">
-    <img style="height: 20rem; margin-top: 1rem;justify-content: center;" src="memory.jpeg" alt="">
-    <h3>Memory</h3>
-    <p>It provides information about how a page is using memory</p>
-  </div>
-  <div id="Application" class="tabcontent">
-    <img style="height: 20rem; margin-top: 1rem;justify-content: center;" src="application.jpeg" alt="">
-    <h3>Application</h3>
-    <p>Application shows what’s in browser storage: in-browser databases like Web SQL, local storage, and more. It also gives granular control over cookies.</p>
-  </div>
-  <div id="Security" class="tabcontent">
-    <img style="height: 20rem; margin-top: 1rem;justify-content: center;" src="security.jpeg" alt="">
-    <h3>Security</h3>
-    <p>Security gives basic security information, letting view a site’s HTTPS certificate and TLS status.</p>
-  </div>
-  <div id="Lighthouse" class="tabcontent">
-    <img style="height: 20rem; margin-top: 1rem;justify-content: center;" src="lighthouse.jpeg" alt="">
-    <h3>Lighthouse</h3>
-    <p>Lighthouse is an automated tool for improving the quality of the site. It provides a list of recommendations on how to improve page performance, make pages more accessible, adhere to best practices and more.</p>
-  </div>
-
-<script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
-   
 </body>
-</html> 
+</html>
